@@ -4,6 +4,8 @@ import { Modal, Button } from 'react-bootstrap';
 
 import Spinner from './Spinner/Spinner';
 import * as actions from '../store/actions/index';
+import './Dog.css';
+
 
 class DogModal extends Component {
     componentDidMount() {
@@ -14,13 +16,13 @@ class DogModal extends Component {
         let image = <Spinner />;
 
         if (!this.props.loadingModal && this.props.randomImgUrl) {
-            image = <img className="card-img-top" src={this.props.randomImgUrl} alt="" style={{'objectFit': 'cover'}} />;
+            image = <img className="card-img-top" src={this.props.randomImgUrl} alt="" />;
         }
 
         return (
             <Modal show={this.props.show} onHide={this.props.onHide} size="md" animation={false} centered>
                 <Modal.Header closeButton>
-                    <Modal.Title style={{'textTransform': 'capitalize'}}>{this.props.breed}</Modal.Title>
+                    <Modal.Title className="modal-title">{this.props.breed}</Modal.Title>
                 </Modal.Header>
                 <Modal.Body>
                     {image}

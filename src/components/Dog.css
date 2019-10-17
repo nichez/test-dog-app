@@ -12,6 +12,6 @@
     object-position: 50% 50%;
 }
 
-.card-title {
+.card-title, .modal-title {
     text-transform: capitalize;
 }
