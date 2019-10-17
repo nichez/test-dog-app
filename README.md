@@ -7,4 +7,6 @@
 3. RUN - Run the app with the following command
 - npm start
 
+4. Open localhost:3000 in a browser to see the app running
+
  To run test type "npm test"
